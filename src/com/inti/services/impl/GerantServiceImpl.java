@@ -5,7 +5,7 @@ import com.inti.dao.interfaces.IGerantDao;
 import com.inti.entities.Gerant;
 import com.inti.service.interfaces.IGerantService;
 
-public class GerantServiceImpl extends ManagerService<Gerant> implements IGerantService{
+public class GerantServiceImpl extends ManagerServiceImpl<Gerant> implements IGerantService{
 	IGerantDao gerantDao = new GerantDaoImpl();
 
 	@Override

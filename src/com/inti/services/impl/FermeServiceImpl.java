@@ -7,7 +7,7 @@ import com.inti.dao.interfaces.IFermeDao;
 import com.inti.entities.Ferme;
 import com.inti.service.interfaces.IFermeService;
 
-public class FermeServiceImpl extends ManagerService<Ferme> implements IFermeService{
+public class FermeServiceImpl extends ManagerServiceImpl<Ferme> implements IFermeService{
 	IFermeDao fermeDao = new FermeDaoImpl();
 
 	@Override
