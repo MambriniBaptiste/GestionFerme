@@ -13,13 +13,13 @@
 		<input type="text" name="etat">
 	</div>
 	<div>
-		<input type="radio" name="BasseCour" value="BasseCour">
-		<label for="BasseCour">BasseCour</label>
-		<input type="radio" name="Bétail" value="Bétail">
-		<label for="Bétail">Bétail</label>
+		<input type="radio" id="choix1" name="typeAnimal" value="BasseCour">
+		<label for="choix1">BasseCour</label>
+		<input type="radio" id="choix2" name="typeAnimal" value="Bétail">
+		<label for="choix2">Bétail</label>
 	</div>
 	<div>
-		<button type="submit">Ajouter</button>
+		<input type="submit" name="ajoutAnimal">
 	</div>
 </body>
 </html>
