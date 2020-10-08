@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Gerant implements Serializable {
@@ -17,6 +18,9 @@ public class Gerant implements Serializable {
 	private Long idGerant;
 	private String nomGerant;
 	private String prenomGerant;
+	
+	@ManyToOne
+	private Ferme ferme;
 	
 	public Gerant(String nomGerant, String prenomGerant) {
 		this.nomGerant = nomGerant;

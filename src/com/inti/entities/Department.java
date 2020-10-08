@@ -1,11 +1,15 @@
 package com.inti.entities;
 
 import java.io.Serializable;
+import java.util.HashSet;
+import java.util.Set;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Department implements Serializable{
@@ -17,6 +21,9 @@ public class Department implements Serializable{
 	private Long idDepartment;
 	private String nomDepartment;
 	private String regionDepartment;
+	
+	@OneToMany(mappedBy = "department", fetch = FetchType.EAGER)
+	Set<Ferme> fermes = new HashSet<>();
 	
 	public Department(String nomDepartment, String regionDepartment) {
 		this.nomDepartment = nomDepartment;
