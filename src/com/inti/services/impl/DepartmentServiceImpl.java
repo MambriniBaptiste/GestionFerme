@@ -5,7 +5,7 @@ import com.inti.dao.interfaces.IDepartmentDao;
 import com.inti.entities.Department;
 import com.inti.service.interfaces.IDepartmentService;
 
-public class DepartmentServiceImpl extends ManagerService<Department> implements IDepartmentService {
+public class DepartmentServiceImpl extends ManagerServiceImpl<Department> implements IDepartmentService {
 	IDepartmentDao departmentDao = new DepartmentDaoImpl();
 
 	@Override
