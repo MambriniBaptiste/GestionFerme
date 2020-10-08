@@ -25,5 +25,7 @@
 		<mapping class="com.inti.entities.Gerant"/>
 		<mapping class="com.inti.entities.Animal"/>
 		<mapping class="com.inti.entities.Eleveur"/>
+		<mapping class="com.inti.entities.BasseCour"/>
+		<mapping class="com.inti.entities.Betail"/>
 	</session-factory>
 </hibernate-configuration>
