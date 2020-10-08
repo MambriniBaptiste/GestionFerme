@@ -4,8 +4,9 @@ import java.util.List;
 
 import com.inti.dao.impl.ManagerDaoImpl;
 import com.inti.dao.interfaces.IDao;
+import com.inti.service.interfaces.IService;
 
-public class ManagerService<T> implements IDao<T> {
+public class ManagerServiceImpl<T> implements IService<T> {
 	IDao<T> dao = new ManagerDaoImpl<>();
 
 	@Override
