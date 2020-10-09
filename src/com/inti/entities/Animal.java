@@ -18,11 +18,11 @@ public class Animal implements Serializable {
 	private Long idAnimal;
 	private boolean etat;
 	
-	@ManyToOne
-	private Ferme ferme;
+//	@ManyToOne
+//	private Ferme ferme;
 	
-	@ManyToOne
-	private Eleveur eleveur;
+//	@ManyToOne
+//	 private Eleveur eleveur;
 	
 	public Animal(boolean etat) {
 		this.etat = etat;
@@ -51,4 +51,6 @@ public class Animal implements Serializable {
 	public String toString() {
 		return "Animal [etat=" + etat + "]";
 	}
+
+	
 }
