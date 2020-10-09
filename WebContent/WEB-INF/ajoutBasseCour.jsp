@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Ajouter un nouvel animal</title>
+<title>Ajouter un nouvel animal type basse cour</title>
 </head>
 <body>
-<form action="ajoutAnimal" method="post">
+<form action="ajoutBasseCour" method="post">
 <div>
 		<label>Etat</label>
 		<select name="etat" id="etat-select">
@@ -17,13 +17,11 @@
 		</select>
 	</div>
 	<div>
-		<input type="radio" id="choix1" name="typeAnimal" value="BasseCour">
-		<label for="choix1">BasseCour</label>
-		<input type="radio" id="choix2" name="typeAnimal" value="Bétail">
-		<label for="choix2">Bétail</label>
+		<label>Habitat</label>
+		<input type="text" name="habitat">
 	</div>
 	<div>
-		<button type="submit" name="ajoutAnimal">Ajouter</button>
+		<button type="submit" name="ajoutBasseCour">Ajouter</button>
 	</div>
 	</form>
 </body>

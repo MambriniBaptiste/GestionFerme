@@ -11,7 +11,7 @@ import com.inti.entities.Animal;
 import com.inti.service.interfaces.IService;
 import com.inti.services.impl.ManagerServiceImpl;
 
-@WebServlet("/ListAnimaux")
+@WebServlet("/listAnimaux")
 public class ListingAnimaux extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     IService<Animal> animalService = new ManagerServiceImpl<>();
