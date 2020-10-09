@@ -11,7 +11,7 @@ import com.inti.entities.Eleveur;
 import com.inti.service.interfaces.IService;
 import com.inti.services.impl.ManagerServiceImpl;
 
-@WebServlet("/AjoutEleveur")
+@WebServlet("/ajoutEleveur")
 public class AjoutEleveur extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	IService<Eleveur> eleveurService = new ManagerServiceImpl<>();
@@ -19,7 +19,10 @@ public class AjoutEleveur extends HttpServlet {
     public AjoutEleveur() {
         super();
     }
-
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/WEB-INF/ajoutEleveur.jsp").forward(request, response);
+    }
+    
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		boolean statut = Boolean.parseBoolean(request.getParameter("statut"));
 		int age = Integer.parseInt(request.getParameter("age"));

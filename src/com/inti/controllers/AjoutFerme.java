@@ -14,13 +14,17 @@ import com.inti.entities.Ferme;
 import com.inti.service.interfaces.IService;
 import com.inti.services.impl.ManagerServiceImpl;
 
-@WebServlet("/AjoutFerme")
+@WebServlet("/ajoutFerme")
 public class AjoutFerme extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	IService<Ferme> fermeService = new ManagerServiceImpl<>();
  
     public AjoutFerme() {
         super();
+    }
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/WEB-INF/ajoutFerme.jsp").forward(request, response);
     }
     
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

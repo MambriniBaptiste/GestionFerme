@@ -20,6 +20,10 @@ public class AjoutAnimal extends HttpServlet {
     public AjoutAnimal() {
         super();
     }
+    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/WEB-INF/ajoutAnimal.jsp").forward(request, response);
+    }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		boolean etat = Boolean.parseBoolean(request.getParameter("etat"));

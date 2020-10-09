@@ -6,7 +6,7 @@
 	<session-factory>
     <!-- Configuration de la connexion -->
 		<property name="hibernate.connection.url">
-			jdbc:mysql://localhost:3306/gestion_ferme_db?createDatabaseIfNotExist=true
+			jdbc:mysql://localhost:3306/ferme_db?createDatabaseIfNotExist=true
 		</property>
 		<property name="hibernate.connection.username">root</property>
 		<property name="hibernate.connection.password"></property>
@@ -25,5 +25,7 @@
 		<mapping class="com.inti.entities.Gerant"/>
 		<mapping class="com.inti.entities.Animal"/>
 		<mapping class="com.inti.entities.Eleveur"/>
+		<mapping class="com.inti.entities.BasseCour"/>
+		<mapping class="com.inti.entities.Betail"/>
 	</session-factory>
 </hibernate-configuration>
