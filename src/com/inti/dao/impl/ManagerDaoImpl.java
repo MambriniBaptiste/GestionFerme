@@ -1,5 +1,7 @@
 package com.inti.dao.impl;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import org.hibernate.HibernateException;
@@ -7,10 +9,12 @@ import org.hibernate.Query;
 import org.hibernate.Session;
 
 import com.inti.dao.interfaces.IDao;
+import com.inti.entities.Animal;
 import com.inti.utils.HibernateUtility;
 
 public class ManagerDaoImpl<T> implements IDao<T>{
-
+private static List<Animal> animals = new ArrayList();
+	
 	@Override
 	public void save(T obj) {
 		Session s = HibernateUtility.getSessionFactory().openSession();
@@ -66,6 +70,7 @@ public class ManagerDaoImpl<T> implements IDao<T>{
 			return null;
 		}
 	}
+	public static List<Animal> getAllAnimals(){ return Collections.unmodifiableList(animals); }
 
 	@Override
 	public T findOne(Class<?> c, long id) {

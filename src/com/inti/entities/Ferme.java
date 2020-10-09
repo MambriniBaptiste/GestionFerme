@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-
+import com.inti.entities.*;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -27,11 +27,11 @@ public class Ferme implements Serializable {
 	@ManyToOne
 	private Department department;
 	
-	@OneToMany(mappedBy = "fermeGerants", fetch = FetchType.EAGER)
-	Set<Gerant> gerants = new HashSet<>();
+	//@OneToMany(mappedBy = "Gerant", fetch = FetchType.EAGER)
+//	Set<Gerant> gerants = new HashSet<>();
 	
-	@OneToMany(mappedBy = "fermeAnimaux", fetch = FetchType.EAGER)
-	Set<Animal> animaux = new HashSet<>();
+//	@OneToMany(mappedBy = "Animal", fetch = FetchType.EAGER)
+//	Set<Animal> animaux = new HashSet<>();
 	
 	public Ferme(String nomFerme, Date dateAchat) {
 		this.nomFerme = nomFerme;
@@ -69,4 +69,15 @@ public class Ferme implements Serializable {
 	public String toString() {
 		return "Ferme [nomFerme=" + nomFerme + ", dateAchat=" + dateAchat + "]";
 	}
+
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
+	
+	
 }

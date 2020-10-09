@@ -1,5 +1,10 @@
 package com.inti.entities;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("betail")
 public class Betail extends Animal {
 
 	private static final long serialVersionUID = 1L;
@@ -10,8 +15,8 @@ public class Betail extends Animal {
 		this.techElevage = techElevage;
 	}
 
-	public Betail(boolean etat) {
-		super(etat);
+	public Betail() {
+		super();
 	}
 
 	public String getTechElevage() {

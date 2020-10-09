@@ -19,7 +19,7 @@ public class Gerant implements Serializable {
 	private String nomGerant;
 	private String prenomGerant;
 	
-	@ManyToOne
+//	@ManyToOne
 	private Ferme ferme;
 	
 	public Gerant(String nomGerant, String prenomGerant) {

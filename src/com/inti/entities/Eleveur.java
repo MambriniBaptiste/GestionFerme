@@ -22,8 +22,8 @@ public class Eleveur implements Serializable {
 	private int age;
 	private boolean statut;
 	
-	@OneToMany
-	Set<Animal> animaux = new HashSet<>();
+//	@OneToMany
+//	Set<Animal> animaux = new HashSet<>();
 	
 	public Eleveur(String nomEleveur, int age, boolean statut) {
 		this.nomEleveur = nomEleveur;
@@ -70,4 +70,6 @@ public class Eleveur implements Serializable {
 	public String toString() {
 		return "Eleveur [nomEleveur=" + nomEleveur + ", age=" + age + ", statut=" + statut + "]";
 	}
+
+	
 }

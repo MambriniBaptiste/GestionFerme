@@ -1,5 +1,10 @@
 package com.inti.entities;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
+@Entity
+@DiscriminatorValue("basseCour")
 public class BasseCour extends Animal {
 
 	private static final long serialVersionUID = 1L;
@@ -8,6 +13,10 @@ public class BasseCour extends Animal {
 	public BasseCour(boolean etat, String habitat) {
 		super(etat);
 		this.habitat = habitat;
+	}
+	
+	public BasseCour() {
+		super();
 	}
 
 	public BasseCour(boolean etat) {
