@@ -23,16 +23,16 @@ public class ListingAnimaux extends HttpServlet {
     public ListingAnimaux() {
         super();
     }
-    @Override
-    public void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        List<Animal> listAnimaux = new ArrayList<Animal>();
-        listAnimaux = ManagerDaoImpl.getAllAnimals();
-        PrintWriter pw = resp.getWriter();
-        req.setAttribute("animals", listAnimaux );
-        req.getRequestDispatcher("/WEB-INF/listAnimaux.jsp");
+
+	@Override
+	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		req.setAttribute("animaux", animalService.findAll(Animal.class));
+		req.getRequestDispatcher("listAnimaix.jsp");
+	}
+ 
         	
 }
-}
+
 
 	
 

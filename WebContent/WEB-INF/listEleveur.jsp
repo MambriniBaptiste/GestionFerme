@@ -9,20 +9,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   
-<title>Liste des animaux</title>
+<title>Liste des Eleveur</title>
 </head>
 <body>
   <table border="1">
 <tr>
 <th>id</th>
-<th>Etat</th>
+<th>Nom</th>
+<th>Age</th>
+<th>Statut</th>
 </tr>
-<c:forEach var="a" items="${animaux}">
-<td>${a.getIdAnimal()}</td>
-<td>${a.isEtat()}</td>
-<td><a href="delete?pId=${a.getIdAnimal() }" class="btn badge-danger">Supprimer</a></td>
+<c:forEach var="e" items="${eleveurs}">
+<tr>
+<td>${e.getIdEleveur()}</td>
+<td>${e.getNomEleveur() </td>
+<td>${e.getAge()}</td>
+<td>${e.isStatut()}</td>
 </tr>
 </c:forEach>
 </table>
 </body>
 </html>
+
